@@ -5,7 +5,7 @@ public class Anagrams {
 	public static String stringReverse(String input) {
 
 		StringBuilder result = new StringBuilder();
-		for (String word : input.split(" ")) {
+		for (String word : input.split(" ", 3)) {
 
 			StringBuilder reverse = new StringBuilder(word.replaceAll("[^a-zA-Z_à-ÿÀ-ß¸¨³²]", "")).reverse();
 			for (int i = 0; i < word.length(); i++) {
@@ -13,10 +13,9 @@ public class Anagrams {
 				if (!Character.isLetter(word.charAt(i))) {
 					reverse.insert(i, word.charAt(i));
 				}
-
 			}
 			result.append(reverse).append(" ");
 		}
-		return result.toString();
+		return result.substring(0, result.length() - 1).toString();
 	}
 }
