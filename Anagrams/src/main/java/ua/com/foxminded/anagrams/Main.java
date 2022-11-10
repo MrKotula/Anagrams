@@ -9,7 +9,7 @@ public class Main {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Input some text: ");
 		String someText = scan.nextLine();
-		System.out.println(Anagrams.anagramBuilder(someText));
+		System.out.println(Anagrams.stringReverse(someText));
 		scan.close();
 
 	}

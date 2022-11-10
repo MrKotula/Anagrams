@@ -5,9 +5,9 @@ public class Anagrams {
 	public static final String WORD_DELIMITER = " ";
 	public static final String WORD_CONNECTOR = "";
 
-	public static String anagramBuilder(String input) {
+	public static String stringReverse(String input) {
 
-		StringBuilder result = new StringBuilder();
+		StringBuilder anagramBuilder = new StringBuilder();
 		for (String word : input.split(WORD_DELIMITER, 10)) {
 
 			StringBuilder reversedNonLettersBuilder = new StringBuilder(
@@ -18,8 +18,8 @@ public class Anagrams {
 					reversedNonLettersBuilder.insert(i, word.charAt(i));
 				}
 			}
-			result.append(reversedNonLettersBuilder).append(WORD_DELIMITER);
+			anagramBuilder.append(reversedNonLettersBuilder).append(WORD_DELIMITER);
 		}
-		return result.substring(0, result.length() - 1);
+		return anagramBuilder.substring(0, anagramBuilder.length() - 1);
 	}
 }
