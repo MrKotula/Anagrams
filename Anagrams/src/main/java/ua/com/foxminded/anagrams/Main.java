@@ -1,17 +1,20 @@
 package ua.com.foxminded.anagrams;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class Main {
 
+	private static final Logger logger = Logger.getLogger(Main.class.getName());
+
 	public static void main(String[] args) {
-
+		
+		String result;
 		Scanner scan = new Scanner(System.in);
-		System.out.print("Input some text: ");
+		logger.info("Input some text: ");
 		String someText = scan.nextLine();
-		System.out.println(Anagrams.stringReverse(someText));
+		result = Anagrams.stringReverse(someText);
+		logger.info(result);
 		scan.close();
-
 	}
-
 }
