@@ -6,8 +6,8 @@ public class Anagrams {
 		
 	}
 	
-	public static final String WORD_DELIMITER = " ";
-    public static final String WORD_CONNECTOR = "";
+	private static final String WORD_DELIMITER = " ";
+    private static final String WORD_CONNECTOR = "";
 
     public static String stringReverse(String input) {
 
